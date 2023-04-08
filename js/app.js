@@ -1,32 +1,77 @@
-let btnPiedra = document.querySelector("#btnPiedra");
-let btnPapel = document.querySelector("#btnPapel");
-let btnTijera = document.querySelector("#btnTijera");
+let btnPiedra = document.getElementById("Piedra");
+let btnPapel = document.getElementById("Papel");
+let btnTijera = document.getElementById("Tijera");
 
-btnPiedra.addEventListener("click", juegaPiedra);
+function random() {
+  let nroRandom = Math.floor(Math.random() * 3 + 1);
 
-btnPapel.addEventListener("click", juegaPiedra);
-
-btnTijera.addEventListener("click", juegaPiedra);
-
-function movimientoRandom() {
-  return Math.floor(Math.random() * 3 + 1);
+  return nroRandom;
 }
 
-function juegaPiedra() {
-  let movimientoComputadora = movimientoRandom();
-  console.log(movimientoComputadora);
+function jugarPiedra() {
+  let movimientoMaquina = random();
 
-  switch (movimientoComputadora) {
+  switch (movimientoMaquina) {
     case 1:
-      console.log("EMPATE");
+      alert("EMPATE");
+
       break;
     case 2:
-      console.log("PERDIO");
+      alert("PERDISTE");
+
       break;
     case 3:
-      console.log("GANO");
+      alert("GANASTE");
+
       break;
+
     default:
       break;
   }
 }
+
+function jugarPapel() {
+  let movimientoMaquina = random();
+
+  switch (movimientoMaquina) {
+    case 1:
+      alert("GANASTE");
+
+      break;
+    case 2:
+      alert("EMPATE");
+
+      break;
+    case 3:
+      alert("PERDISTE");
+
+      break;
+
+    default:
+      break;
+  }
+}
+function jugarTijera() {
+  let movimientoMaquina = random();
+
+  switch (movimientoMaquina) {
+    case 1:
+      alert("PERDISTE");
+
+      break;
+    case 2:
+      alert("GANASTE");
+
+      break;
+    case 3:
+      alert("EMPATE");
+
+      break;
+
+    default:
+      break;
+  }
+}
+btnPiedra.addEventListener("click", jugarPiedra);
+btnPapel.addEventListener("click", jugarPapel);
+btnTijera.addEventListener("click", jugarTijera);
