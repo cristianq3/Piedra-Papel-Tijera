@@ -1,3 +1,32 @@
-/* 1- Crea una web con bootstrap y js, que contenga un botón comenzar el juego, en ese momento se crea un número aleatorio que el usuario deberá adivinar, la interfaz del usuario debe tener además un input para ingresar un número y un botón enviar, al presionar el botón enviar mostrar en un alert si el usuario adivino o no el número mágico, si no lo adivino indicarle con un alert si el numero que ingreso es mayor o menor al número mágico.
-Cuando el usuario adivine el numero mostrar un mensaje indicando al usuario que adivino el numero. */
+let btnPiedra = document.querySelector("#btnPiedra");
+let btnPapel = document.querySelector("#btnPapel");
+let btnTijera = document.querySelector("#btnTijera");
 
+btnPiedra.addEventListener("click", juegaPiedra);
+
+btnPapel.addEventListener("click", juegaPiedra);
+
+btnTijera.addEventListener("click", juegaPiedra);
+
+function movimientoRandom() {
+  return Math.floor(Math.random() * 3 + 1);
+}
+
+function juegaPiedra() {
+  let movimientoComputadora = movimientoRandom();
+  console.log(movimientoComputadora);
+
+  switch (movimientoComputadora) {
+    case 1:
+      console.log("EMPATE");
+      break;
+    case 2:
+      console.log("PERDIO");
+      break;
+    case 3:
+      console.log("GANO");
+      break;
+    default:
+      break;
+  }
+}
