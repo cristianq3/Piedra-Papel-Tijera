@@ -19,16 +19,19 @@
       <p class="lead">Ejercicio | Practica DOM | Javascript</p>
       <h1 class="display-2">Piedra, Papel o Tijera</h1>
     </header>
-    <main>
-      <section>
+    <main
+      class="d-flex justify-content-center align-items-center flex-column mt-3"
+    >
+      <section id="contenedorPadre  ">
         <div
           class="container d-flex justify-content-center align-items-center flex-column mt-3"
+          id="child"
         >
           <p class="lead text-center">
             Elije tu movimiento y la maquina lo hará aleatoreamente. <br />
             Que gane el mejor!!!
           </p>
-
+          <!-- OPCIONES DE PIEDRA PAPEL O TIJERA -->
           <div class="d-flex justify-content-around flex-wrap">
             <button class="boton" id="Piedra">
               <img class="opciones" src="/img/piedra.png" alt="piedra" />

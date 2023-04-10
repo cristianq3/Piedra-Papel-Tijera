@@ -2,6 +2,8 @@ let btnPiedra = document.getElementById("Piedra");
 let btnPapel = document.getElementById("Papel");
 let btnTijera = document.getElementById("Tijera");
 
+let section = document.getElementsByTagName("section");
+
 function random() {
   let nroRandom = Math.floor(Math.random() * 3 + 1);
 
@@ -13,15 +15,15 @@ function jugarPiedra() {
 
   switch (movimientoMaquina) {
     case 1:
-      alert("EMPATE");
+      alert("PIEDRA!, EMPATE!");
 
       break;
     case 2:
-      alert("PERDISTE");
+      alert("PAPEL!, PERDISTE!");
 
       break;
     case 3:
-      alert("GANASTE");
+      alert("TIJERAS!, FELICITACIONES GANASTE!");
 
       break;
 
@@ -35,15 +37,15 @@ function jugarPapel() {
 
   switch (movimientoMaquina) {
     case 1:
-      alert("GANASTE");
+      alert("PIEDRA, GANASTE");
 
       break;
     case 2:
-      alert("EMPATE");
+      alert("PAPEL!, EMPATE!");
 
       break;
     case 3:
-      alert("PERDISTE");
+      alert("TIJERAS!, PERDISTE!");
 
       break;
 
@@ -56,15 +58,15 @@ function jugarTijera() {
 
   switch (movimientoMaquina) {
     case 1:
-      alert("PERDISTE");
+      alert("PIEDRA!, PERDISTE!");
 
       break;
     case 2:
-      alert("GANASTE");
+      alert("PAPEL!, GANASTE!");
 
       break;
     case 3:
-      alert("EMPATE");
+      alert("TIJERAS, EMPATE!");
 
       break;
 
